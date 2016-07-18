@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">CrazyGame</string>
+    <string name="simple_coding">横幅(Banner)广告示例</string>
+    <string name="simple_video">视频广告示例</string>
+    <string name="simple_inters">插屏广告示例</string>
+    <string name="simple_inters_for_video">视频插屏图片广告示例</string>
+    <string name="simple_icon">轮盘广告示例</string>
+    <string name="simple_recmad">推广墙示例</string>
+    <string name="video">视频广告 > 暂停视频广告</string>
+    <string name="advanced">高级应用 </string>
+    <string name="preroll_video">前贴片广告示例</string>
+    <string name="nrlm">内容联盟示例</string>
+</resources>

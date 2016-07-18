@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.game.jieluo.crazygame.CrazyActivity">
+
+    <EditText
+        android:id="@+id/linenumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:hint="line"
+        android:inputType="number"/>
+    <EditText
+        android:id="@+id/allnumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:hint="all"
+        android:inputType="number"/>
+    <EditText
+        android:id="@+id/maxremovenumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:hint="maxremove"
+        android:inputType="number"/>
+
+    <EditText
+        android:id="@+id/anumber"
+        android:layout_below="@id/linenumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="A:removed"
+        android:inputType="number"/>
+    <EditText
+        android:id="@+id/bnumber"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@id/anumber"
+        android:layout_below="@id/allnumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="B:removed"
+        android:inputType="number"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_winner"
+        android:layout_below="@id/allnumber"
+        android:layout_alignParentRight="true"
+        android:text="Winner"
+        android:gravity="center_vertical"
+        android:layout_marginTop="18dp"
+        android:layout_marginRight="10dp"/>
+    <Button
+        android:id="@+id/confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/anumber"
+        android:layout_centerHorizontal="true"
+        android:text="移出"/>
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_below="@id/confirm"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/feeds_button_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/lightcyan"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <Button
+                    android:id="@+id/btnList"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:visibility="gone"
+                    android:text="ListView信息流广告" />
+
+                <Button
+                    android:id="@+id/btnOrigin"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Native原生广告" />
+
+                <Button
+                    android:id="@+id/btnReconfirm"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:visibility="gone"
+                    android:text="非WiFi下二次确认下载" />
+
+                <Button
+                    android:id="@+id/btnVideoFeed"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:visibility="gone"
+                    android:text="信息流视频" />
+
+                <Button
+                    android:id="@+id/btnHTMLFeedLunBo"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:visibility="gone"
+                    android:text="信息流模板_轮播" />
+
+                <Button
+                    android:id="@+id/btnHTMLFeedChuChuang"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:visibility="gone"
+                    android:text="信息流模板_橱窗" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/std_button_group"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/feeds_button_group"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="@color/ivory"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <Button
+                    android:id="@+id/simple_coding"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/gray"
+                    android:text="@string/simple_coding" />
+
+                <Button
+                    android:id="@+id/simple_inters"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/gray"
+                    android:text="@string/simple_inters" />
+
+                <Button
+                    android:id="@+id/simple_inters_for_videoapp"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/gray"
+                    android:text="@string/simple_inters_for_video" />
+
+                <Button
+                    android:id="@+id/preroll"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/gray"
+                    android:visibility="gone"
+                    android:text="@string/preroll_video" />
+
+                <Button
+                    android:id="@+id/nrlm"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/gray"
+                    android:visibility="gone"
+                    android:text="@string/nrlm" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.game.jieluo.crazygame">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <!-- 以下为可选权限 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="com.android.browser.permission.READ_HISTORY_BOOKMARKS" />
+
+    <permission
+        android:name="com.android.launcher.permission.READ_SETTINGS"
+        android:permissionGroup="android.permission-group.SYSTEM_TOOLS"
+        android:protectionLevel="normal" />
+    <permission
+        android:name="com.android.launcher.permission.WRITE_SETTINGS"
+        android:permissionGroup="android.permission-group.SYSTEM_TOOLS"
+        android:protectionLevel="normal" />
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+        android:name="BaiduMobAd_APP_ID"
+        android:value="dd3aa1a8" />
+        <activity android:name=".CrazyActivity">
+        </activity>
+        <activity
+            android:name="com.baidu.mobads.AppActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+
+        <!-- 信息流广告必须添加 -->
+        <activity
+            android:name="com.baidu.mobad.feeds.BaiduActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation" />
+
+        <!-- for standard testing -->
+        <activity
+            android:name="com.game.jieluo.crazygame.RSplashActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.game.jieluo.crazygame.BannerAdActivity"
+            android:label="@string/simple_coding" />
+        <activity
+            android:name="com.game.jieluo.crazygame.InterstitialAdActivity"
+            android:label="@string/simple_inters" />
+        <activity
+            android:name=".InterstitialAdForVideoAppActivity"
+            android:label="@string/simple_inters_for_video" />
+        <activity
+            android:name="com.game.jieluo.crazygame.baiduad.feeds.MainActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.game.jieluo.crazygame.baiduad.feeds.ListViewActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.game.jieluo.crazygame.baiduad.feeds.NativeOriginActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity android:name="com.game.jieluo.crazygame.baiduad.feeds.ReconfirmActivity" >
+        </activity>
+        <activity
+            android:name="com.game.jieluo.crazygame.baiduad.feeds.VideoFeedActivity"
+            android:configChanges="screenSize|orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme.Full">
+        </activity>
+        <activity
+            android:name="com.game.jieluo.crazygame.baiduad.feeds.HTMLFeedLunBoActivity"
+            android:configChanges="screenSize|orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme.Full">
+        </activity>
+        <activity
+            android:name="com.game.jieluo.crazygame.baiduad.feeds.HTMLFeedChuChuangActivity"
+            android:configChanges="screenSize|orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme.Full">
+        </activity>
+
+        <activity
+            android:name="com.game.jieluo.crazygame.baiduad.basevideo.PrerollActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:configChanges="screenSize|orientation|keyboardHidden" >
+        </activity>
+
+
+        <activity
+            android:name="com.game.jieluo.crazygame.CpuAdActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:configChanges="screenSize|orientation|keyboardHidden" >
+        </activity>
+    </application>
+
+</manifest>
